@@ -5,7 +5,7 @@
     font-family: 'Poppins', sans-serif;
     color: var(--font-color);
 }
-
+ 
 :root {
     --bg-color: #f9f9f9;
     --font-color: #2D2E32;
@@ -87,16 +87,17 @@ header nav ul li a{
     background-color: white;
 }
 
-/* The animation code */
-@keyframes example {
-    from {position: relative; top: 0;}
-    to {position: relative; top: -30px;}
+
+#sec1 .infoPrincipal #stack #stack01 {
+    position: relative; 
+    top: 0;
 }
-  
-:hover #sec1 .infoPrincipal #stack #stack01 {
-    animation-name: example;
-    animation-duration: 2s;
-  }
+
+#sec1 .infoPrincipal #stack #stack01:after {
+    position: relative; 
+    top: -30px;
+    transition: -0.3s;
+}
 
 #sec2 p {
     max-width: 600px;
