@@ -1,0 +1,110 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    color: var(--font-color);
+}
+
+:root {
+    --bg-color: #f9f9f9;
+    --font-color: #2D2E32;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 80px;
+    border: 1px solid rgb(00, 00, 00, 0.1);
+    padding: 20px;
+}
+
+header nav ul{
+    display: flex;
+    gap: 28px;
+    list-style: none;
+    cursor: pointer;
+    
+    font-weight: bold;   
+}
+
+header nav ul li a{
+    text-decoration: none;
+}
+
+
+.section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+
+    height: 500px;
+
+    background-color: var(--bg-color);
+}
+
+#sec1 .infoPrincipal {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+#sec1 h1 {
+    max-width: 400px;
+    font-size: 3rem;
+    font-weight: bolder;
+    text-wrap: wrap;
+}
+
+.section p {
+    max-width: 400px;
+    font-size: 1.1rem;
+    text-align: justify;
+}
+
+#sec1 div .icon {
+    width: 44px;
+}
+
+#sec1 #stack {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.pic {
+    width: 380px;
+}
+
+#sec2, #sec4 {
+    background-color: white;
+}
+
+/* The animation code */
+@keyframes example {
+    from {position: relative; top: 0;}
+    to {position: relative; top: -30px;}
+}
+  
+:hover #sec1 .infoPrincipal #stack #stack01 {
+    animation-name: example;
+    animation-duration: 2s;
+  }
+
+#sec2 p {
+    max-width: 600px;
+    text-wrap: wrap;
+    
+}
+
+#sec3, #sec4 {
+    flex-direction: column;
+    text-align: center;
+}   
