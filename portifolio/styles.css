@@ -27,17 +27,48 @@ header {
 
 header nav ul{
     display: flex;
-    gap: 28px;
+    gap: 36px;
     list-style: none;
     cursor: pointer;
     
     font-weight: bold;   
 }
 
+header nav ul li a:hover {
+    background-color: var(--font-color);
+    color: var(--bg-color);
+
+    padding: 8px;
+
+    border-radius: 8px;
+}
+
 header nav ul li a{
     text-decoration: none;
 }
 
+
+header #hireMe {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+
+    background-color: var(--font-color);
+    padding: 4px 16px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+header #mail {
+    width: 40px;
+}
+
+header #hireMe p {
+    color: var(--bg-color);
+    font-weight: 600;
+}
 
 .section {
     display: flex;
@@ -77,6 +108,8 @@ header nav ul li a{
     display: flex;
     align-items: center;
     gap: 20px;
+
+    cursor: pointer;
 }
 
 #imgPrincipal {
