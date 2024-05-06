@@ -4,13 +4,14 @@
     --tertiary-color: #F0EDEE;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1100px) {
+
     .menu {
-        display: block;   
+        display: block;
         position: absolute;
         top: 0;
         left: 0;     
-        padding: 30px;     
+        padding: 22px 40px;     
     }
     
     .menu .menu-lines {
@@ -114,37 +115,25 @@
 
     #home .information {
         align-items: center;
-        width: 320px;
-    }
-    
-    #home .information #stack {
-        align-items: center;
-        justify-content: center;
-        gap: 5px;
-        margin-top: 16px;
-        
-        font-weight: bold;
+        width: 380px;
     }
 
-    #home #principalPic {
-        max-width: 50vw;
+    #home .information #stack .stackInfo {
+        display: flex;
+        gap: 3px;
     }
 
     #about {
         display: flex;
         flex-direction: column;
-    }
-
-    #about #secondPic {
-        width: 340px;
+        height: auto;
+        margin: 2rem 0;
     }
 
     #about #aboutMe-description{
-        display: flex;
-        flex-direction: column;
-        gap: 16px;
-        width: 330px;
+        width: 360px;
     }
+
     #toHome {
         display: flex;
         width: 55px;

@@ -14,7 +14,7 @@
 
 body {
     width: 100%;
-    height: 100vh;
+    height: 100%;
 }
 
 header {
@@ -23,7 +23,6 @@ header {
     align-items: center;
     height: 80px;
     border: 1px solid rgb(00, 00, 00, 0.1);
-    padding: 20px;
 }
 
 header h2 {
@@ -91,43 +90,37 @@ header nav ul li a{
     align-items: center;
     justify-content: center;
     gap: 40px;
-    height: 60vh;
+    height: 70vh;
     background-color: var(--primary-color);
-}
-
-#home .principalPic {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
-
-#home h1 {
-    max-width: 400px;
-    font-size: 3rem;
-    font-weight: bolder;
-    text-wrap: wrap;
 }
 
 .section p {
     max-width: 400px;
-    font-size: 1.1rem;
+    font-size: 1rem;
     text-align: justify;
 }
 
-#home div .icon {
-    width: 44px;
+#home h1 {
+    max-width: 400px;
+    font-size: 2.7rem;
+    font-weight: bolder;
+    text-wrap: wrap;
+}
+
+.icon {
+    width: 40px;
 
 }
 
 #home #stack {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 16px;
     cursor: pointer;
 }
 
 #principalPic {
-    width: 20rem;
+    width:20rem;
     
     border: 3px solid black;
     animation: morph 8s ease-in-out infinite;
@@ -153,7 +146,7 @@ header nav ul li a{
 #home .information {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 1.3rem;
 }
 
 #home .information .socialMedia {
@@ -166,7 +159,7 @@ header nav ul li a{
     width: 24rem;
 }
 
-#about, #projects {
+#about, #contact{
     background-color: white;
 }
 
@@ -179,14 +172,28 @@ header nav ul li a{
     transition: transform 450ms;
 }
 
+#about .information, #about #skils  {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+span {
+    font-weight: bold;
+}
+
 #about p {
-    max-width: 600px;
+    max-width: 32rem;
     text-wrap: wrap;   
 }
 
 #projects, #contact {
     flex-direction: column;
     text-align: center;
+}
+
+#contact {
+    height: 250px;
 }
 
 #toHome {
