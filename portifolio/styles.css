@@ -45,109 +45,23 @@ header nav ul li a{
     text-decoration: none;
 }
 
-/*Burger menu*/
-@media (max-width: 600px) {
-    .menu {
-        display: inline;
-    }
-
-    header nav, header div {
-        display: none;
-    }
-}
 .menu {
     display: none;
-    position: absolute;
-    top: 0;
-    left: 0;
-    
-    padding: 30px;
 }
-
-.menu .menu-lines {
-    position: absolute;
-    z-index: 999;
-    width: 35px;
-    height: 35px;
-}
-
-.menu .menu-lines span {
-    display: block;
-    width: 35px;
-    height: 5px;
-    margin-bottom: 10px;
-    background-color: var(--secondary-color);
-    border-radius: 3px;
-
-    transition: all ease .2s;
-}
-
-.menu .menu-faketrigger {
-    position: absolute;
-    z-index: 1000;
-    width: 35px;
-    height: 35px;
-    opacity: 0;
+.menu ul{
+    display: flex; 
+    gap: 24px;
+    align-items: center;
+    list-style: none;
     cursor: pointer;
+    text-align: center;
 }
 
-.menu .menu-faketrigger:checked ~.menu-lines span:nth-child(1) {
-    transform-origin: 0% 0%;
-    transform: rotate(45deg) scale(1.25);
+.menu .hireMe {
+    width: 200px;
 }
 
-.menu .menu-faketrigger:checked ~.menu-lines span:nth-child(2) {
-    opacity: 0;
-}   
-
-.menu .menu-faketrigger:checked ~.menu-lines span:nth-child(3) {
-    transform-origin: 0% 100%;
-    transform: rotate(-45deg) scale(1.25);
-}
-
-.menu ul {
-    position: absolute;
-    z-index: 998;
-    left: 0;
-    top: 0;
-    width: 300px;
-    height: calc(100vh - 100px);
-    padding-top: 100px;
-    background-color: var(--primary-color);
-    margin-left: -300px;
-    transition: all ease .2s;
-}
-
-.menu .menu-faketrigger:checked ~ ul {
-    margin-left: 0;
-}
-
-.menu ul {
-    display: flex;
-    flex-direction: column;
-}
-
-.menu ul li {
-    padding: 10px 30px;
-}
-
-.menu ul li {
-    text-decoration: none;
-    color: var(--secondary-color);
-    font-size: 22px;
-    transition: all ease .3s;
-}
-
-
-.menu ul li:hover {
-    background-color: var(--secondary-color);
-    color: var(--primary-color);
-}
-
-
-
-
-header #hireMe {
+.hireMe {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -158,24 +72,14 @@ header #hireMe {
     border-radius: 8px;
 }
 
-header #mail {
+.hireMe .mail {
     width: 36px;
 }
 
-header #hireMe p {
+.hireMe p {
     color: var(--primary-color);
     font-weight: 600;
     font-size: 0.9rem;
-}
-
-header #changeMode {
-    display: flex;
-    gap: 30px;
-}
-
-#mode {
-    width: 30px;
-    cursor: pointer;
 }
 
 .section {
@@ -183,17 +87,17 @@ header #changeMode {
     align-items: center;
     justify-content: center;
     gap: 40px;
-    height: 500px;
+    height: 60vh;
     background-color: var(--primary-color);
 }
 
-#sec1 .infoPrincipal {
+#home .principalPic {
     display: flex;
     flex-direction: column;
     gap: 12px;
 }
 
-#sec1 h1 {
+#home h1 {
     max-width: 400px;
     font-size: 3rem;
     font-weight: bolder;
@@ -206,19 +110,19 @@ header #changeMode {
     text-align: justify;
 }
 
-#sec1 div .icon {
+#home div .icon {
     width: 44px;
 
 }
 
-#sec1 #stack {
+#home #stack {
     display: flex;
     align-items: center;
     gap: 20px;
     cursor: pointer;
 }
 
-#imgPrincipal {
+#principalPic {
     width: 20rem;
     
     border: 3px solid black;
@@ -242,16 +146,23 @@ header #changeMode {
     }
 }
 
-#sec1 .infoPrincipal .redeSocial {
+#home .information {
     display: flex;
-    gap: 15px;
+    flex-direction: column;
+    gap: 10px;
 }
 
-#img2 {
+#home .information .socialMedia {
+    display: flex;
+    gap: 15px;
+
+}
+
+#secondPic {
     width: 24rem;
 }
 
-#sec2, #sec4 {
+#about, #projects {
     background-color: white;
 }
 
@@ -264,12 +175,12 @@ header #changeMode {
     transition: transform 450ms;
 }
 
-#sec2 p {
+#about p {
     max-width: 600px;
     text-wrap: wrap;   
 }
 
-#sec3, #sec4 {
+#projects, #contact {
     flex-direction: column;
     text-align: center;
 }
