@@ -191,8 +191,4 @@ header nav ul li a{
 
 #toHome {
     display: none;
-    width: 55px;
-    position: fixed;
-    right: 0;
-    top: 610px;
 }

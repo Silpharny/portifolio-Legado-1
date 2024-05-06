@@ -1,3 +1,8 @@
+:root {
+    --primary-color: #f9f9f9;
+    --secondary-color: #2D2E32;
+    --tertiary-color: #F0EDEE;
+}
 
 @media (max-width: 800px) {
     .menu {
@@ -55,9 +60,9 @@
         left: 0;
         top: 0;
         width: 300px;
-        height: calc(100vh - 100px);
+        height: 100vh;
         padding-top: 100px;
-        background-color: var(--primary-color);
+        background-color: var(--tertiary-color);
         margin-left: -300px;
         transition: all ease .2s;
     }
@@ -142,5 +147,9 @@
     }
     #toHome {
         display: flex;
+        width: 55px;
+        position: fixed;
+        right: 0;
+        top: 710px;
     }
 }
