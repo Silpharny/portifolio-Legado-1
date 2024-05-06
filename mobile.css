@@ -1,10 +1,10 @@
 
-@media (max-width: 600px) {
+@media (max-width: 800px) {
     .menu {
         display: block;   
         position: absolute;
         top: 0;
-        left: 0;    
+        left: 0;     
         padding: 30px;     
     }
     
@@ -95,7 +95,7 @@
     }
 
     .section {
-        height: 75vh;
+        height: 100vh;
     }
 
     main #home {
@@ -103,10 +103,15 @@
         flex-direction: column-reverse;
     }
 
-    #home .information {
-        align-items: center;
+    #home h1 {
+        font-size: 2rem;
     }
 
+    #home .information {
+        align-items: center;
+        width: 320px;
+    }
+    
     #home .information #stack {
         align-items: center;
         justify-content: center;
@@ -125,10 +130,14 @@
         flex-direction: column;
     }
 
+    #about #secondPic {
+        width: 340px;
+    }
+
     #about #aboutMe-description{
         display: flex;
         flex-direction: column;
         gap: 16px;
-        width: 400px;
+        width: 330px;
     }
 }

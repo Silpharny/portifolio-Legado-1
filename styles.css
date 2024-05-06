@@ -26,6 +26,10 @@ header {
     padding: 20px;
 }
 
+header h2 {
+    cursor: pointer;
+}
+
 header nav ul{
     display: flex;
     gap: 36px;
