@@ -115,7 +115,7 @@
 
     #home .information {
         align-items: center;
-        width: 380px;
+        max-width: 23rem;
     }
 
     #home .information #stack .stackInfo {
@@ -132,6 +132,10 @@
 
     #about #aboutMe-description{
         width: 360px;
+    }
+
+    #projectList {
+        gap: 2px;
     }
 
     #toHome {
