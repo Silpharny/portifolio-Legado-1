@@ -7,8 +7,9 @@
 }
  
 :root {
-    --bg-color: #f9f9f9;
-    --font-color: #2D2E32;
+    --primary-color: #f9f9f9;
+    --secondary-color: #2D2E32;
+    --tertiary-color: #cdcdcd
 }
 
 body {
@@ -25,10 +26,6 @@ header {
     padding: 20px;
 }
 
-header #menuMobile {
-    display: none;
-}
-
 header nav ul{
     display: flex;
     gap: 36px;
@@ -38,8 +35,8 @@ header nav ul{
 }
 
 header nav ul li a:hover {
-    background-color: var(--font-color);
-    color: var(--bg-color);
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
     padding: 8px;
     border-radius: 8px;
 }
@@ -48,12 +45,114 @@ header nav ul li a{
     text-decoration: none;
 }
 
+/*Burger menu*/
+@media (max-width: 600px) {
+    .menu {
+        display: inline;
+    }
+
+    header nav, header div {
+        display: none;
+    }
+}
+.menu {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+    padding: 30px;
+}
+
+.menu .menu-lines {
+    position: absolute;
+    z-index: 999;
+    width: 35px;
+    height: 35px;
+}
+
+.menu .menu-lines span {
+    display: block;
+    width: 35px;
+    height: 5px;
+    margin-bottom: 10px;
+    background-color: var(--secondary-color);
+    border-radius: 3px;
+
+    transition: all ease .2s;
+}
+
+.menu .menu-faketrigger {
+    position: absolute;
+    z-index: 1000;
+    width: 35px;
+    height: 35px;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.menu .menu-faketrigger:checked ~.menu-lines span:nth-child(1) {
+    transform-origin: 0% 0%;
+    transform: rotate(45deg) scale(1.25);
+}
+
+.menu .menu-faketrigger:checked ~.menu-lines span:nth-child(2) {
+    opacity: 0;
+}   
+
+.menu .menu-faketrigger:checked ~.menu-lines span:nth-child(3) {
+    transform-origin: 0% 100%;
+    transform: rotate(-45deg) scale(1.25);
+}
+
+.menu ul {
+    position: absolute;
+    z-index: 998;
+    left: 0;
+    top: 0;
+    width: 300px;
+    height: calc(100vh - 100px);
+    padding-top: 100px;
+    background-color: var(--primary-color);
+    margin-left: -300px;
+    transition: all ease .2s;
+}
+
+.menu .menu-faketrigger:checked ~ ul {
+    margin-left: 0;
+}
+
+.menu ul {
+    display: flex;
+    flex-direction: column;
+}
+
+.menu ul li {
+    padding: 10px 30px;
+}
+
+.menu ul li {
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-size: 22px;
+    transition: all ease .3s;
+}
+
+
+.menu ul li:hover {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+
+
+
 header #hireMe {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 8px;
-    background-color: var(--font-color);
+    background-color: var(--secondary-color);
     padding: 4px 12px;
     cursor: pointer;
     border-radius: 8px;
@@ -64,7 +163,7 @@ header #mail {
 }
 
 header #hireMe p {
-    color: var(--bg-color);
+    color: var(--primary-color);
     font-weight: 600;
     font-size: 0.9rem;
 }
@@ -85,7 +184,7 @@ header #changeMode {
     justify-content: center;
     gap: 40px;
     height: 500px;
-    background-color: var(--bg-color);
+    background-color: var(--primary-color);
 }
 
 #sec1 .infoPrincipal {
