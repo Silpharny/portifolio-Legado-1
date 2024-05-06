@@ -188,3 +188,11 @@ header nav ul li a{
     flex-direction: column;
     text-align: center;
 }
+
+#toHome {
+    display: none;
+    width: 55px;
+    position: fixed;
+    right: 0;
+    top: 610px;
+}
