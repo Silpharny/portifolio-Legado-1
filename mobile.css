@@ -134,6 +134,11 @@
         width: 360px;
     }
 
+    #projects {
+        height: 100%;
+        padding: 20px 0;
+    }
+
     #projectList {
         gap: 2px;
     }
